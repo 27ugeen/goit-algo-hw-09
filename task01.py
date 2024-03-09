@@ -58,3 +58,36 @@ for amount in amounts:
     print(f"Greedy algorithm time: {greedy_time} milliseconds")
     print(f"Dynamic algorithm time: {dynamic_time} milliseconds")
     print("=" * 42)
+
+# //================================================================
+# //=================== my_custom_func =============================
+
+# def min_nums_of_coins(n, coins):
+#     nums = [float('inf') for x in range(n+1)]
+#     nums[0] = 0
+#     for coin in coins:
+#         for amount in range(len(nums)):
+#             if coin <= amount:
+#                 nums[amount] = min(nums[amount], 1 + nums[amount - coin])
+#     return nums[n] if nums[n] != float('inf') else -1
+
+# min_coins = [1, 2, 5, 10, 25, 50]
+# custom_coins = [5, 25, 2, 50, 1, 10]
+# amount = 113
+
+# print("Custom Dynamic Result:", min_nums_of_coins(amount, min_coins))
+# print("=" * 42)
+# print("Custom Dynamic Result:", min_nums_of_coins(amount, custom_coins))
+# print("=" * 42)
+
+# amounts = [10, 100, 1000, 10000, 100000]
+
+# for amount in amounts:
+#     print(f"Amount: {amount}")
+#     greedy_time = measure_execution_time(find_coins_greedy, amount, greedy_coins)
+#     dynamic_time = measure_execution_time(find_min_coins, amount, min_coins)
+#     custom_time = measure_execution_time(min_nums_of_coins, amount, min_coins)
+#     print(f"Greedy algorithm time: {greedy_time} milliseconds")
+#     print(f"Dynamic algorithm time: {dynamic_time} milliseconds")
+#     print(f"Custom algorithm time: {custom_time} milliseconds")
+#     print("=" * 42)
